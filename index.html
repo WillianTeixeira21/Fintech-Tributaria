@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Tributária - Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./imagens/Company-Fintech-Logo-Template-Graphics-70239429-1-1-580x435.jpg" alt="Fintech Tributária" height="30" class="d-inline-block align-top me-2">
+                Fintech Tributária
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-tachometer-alt me-1"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-calculator me-1"></i> Cálculos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-file-invoice-dollar me-1"></i> Pagamentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell me-1"></i> Alertas</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser" data-bs-toggle="dropdown">
+                            <img src="https://via.placeholder.com/30" alt="Usuário" class="rounded-circle me-2">
+                            <span>João Silva</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Configurações</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i> Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-2 d-none d-lg-block">
+                <div class="card sidebar-card">
+                    <div class="card-header bg-light">
+                        <i class="fas fa-building me-2"></i> Minhas Empresas
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action active">
+                            <i class="fas fa-store me-2"></i> Tech Solutions Ltda.
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-store me-2"></i> Comércio Digital MEI
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-plus-circle me-2"></i> Adicionar Empresa
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card sidebar-card mt-3">
+                    <div class="card-header bg-light">
+                        <i class="fas fa-tasks me-2"></i> Menu Rápido
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-file-import me-2"></i> Importar Dados
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-chart-line me-2"></i> Simulações
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-file-pdf me-2"></i> Relatórios
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">
+                            <i class="fas fa-question-circle me-2"></i> Ajuda
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Área Principal -->
+            <div class="col-lg-10">
+                <!-- Breadcrumb -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-home me-2"></i> Dashboard</li>
+                    </ol>
+                </nav>
+
+                <!-- Cards Resumo -->
+                <div class="row mb-4">
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <div class="card card-resumo bg-success text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-title">Tributos Pagos</h6>
+                                        <h2 class="card-text">R$ 12.450,00</h2>
+                                        <span class="small">este mês</span>
+                                    </div>
+                                    <i class="fas fa-check-circle fa-3x opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <div class="card card-resumo bg-warning text-dark">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-title">Tributos Pendentes</h6>
+                                        <h2 class="card-text">R$ 3.780,00</h2>
+                                        <span class="small">vencimento próximo</span>
+                                    </div>
+                                    <i class="fas fa-exclamation-triangle fa-3x opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <div class="card card-resumo bg-info text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-title">Economia Estimada</h6>
+                                        <h2 class="card-text">R$ 1.250,00</h2>
+                                        <span class="small">com otimização</span>
+                                    </div>
+                                    <i class="fas fa-piggy-bank fa-3x opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <div class="card card-resumo bg-danger text-white">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-title">Alertas</h6>
+                                        <h2 class="card-text">3</h2>
+                                        <span class="small">novos</span>
+                                    </div>
+                                    <i class="fas fa-bell fa-3x opacity-50"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gráficos e Tabelas -->
+                <div class="row">
+                    <div class="col-lg-8 mb-4">
+                        <div class="card">
+                            <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i> Histórico de Tributos (últimos 6 meses)</h5>
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                        <i class="fas fa-filter me-1"></i> Filtrar
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Todos</a></li>
+                                        <li><a class="dropdown-item" href="#">ICMS</a></li>
+                                        <li><a class="dropdown-item" href="#">PIS/COFINS</a></li>
+                                        <li><a class="dropdown-item" href="#">IRPJ/CSLL</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-placeholder bg-light p-4 text-center">
+                                    <i class="fas fa-chart-bar fa-5x text-muted mb-3"></i>
+                                    <p class="text-muted">Gráfico de histórico de tributos será exibido aqui</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i> Próximos Vencimentos</h5>
+                            </div>
+                            <div class="card-body p-0">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">DARF - IRPJ</h6>
+                                            <small class="text-muted">10/06/2023</small>
+                                        </div>
+                                        <span class="badge bg-warning text-dark">R$ 1.250,00</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">DAS - Simples</h6>
+                                            <small class="text-muted">15/06/2023</small>
+                                        </div>
+                                        <span class="badge bg-warning text-dark">R$ 2.380,00</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0">ICMS</h6>
+                                            <small class="text-muted">20/06/2023</small>
+                                        </div>
+                                        <span class="badge bg-warning text-dark">R$ 1.150,00</span>
+                                    </li>
+                                    <li class="list-group-item text-center">
+                                        <a href="#" class="text-decoration-none">Ver todos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card">
+                            <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i> Alertas Recentes</h5>
+                                <span class="badge bg-danger">3 novos</span>
+                            </div>
+                            <div class="card-body p-0">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0 text-danger">
+                                                <i class="fas fa-exclamation-circle fa-2x"></i>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1">Mudança na legislação do ICMS</h6>
+                                                <p class="mb-1 small">Nova lei altera alíquotas para o setor de tecnologia a partir de 01/07/2023.</p>
+                                                <small class="text-muted">Publicado em: 25/05/2023</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="d-flex">
+                                            <div class="flex-shrink-0 text-warning">
+                                                <i class="fas fa-info-circle fa-2x"></i>
+                                            </div>
+                                            <div class="flex-grow-1 ms-3">
+                                                <h6 class="mb-1">Obrigação acessória pendente</h6>
+                                                <p class="mb-1 small">Declaração de Débitos e Créditos Tributários Federais (DCTF) vence em 10/06.</p>
+                                                <small class="text-muted">Publicado em: 22/05/2023</small>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item text-center">
+                                        <a href="#" class="text-decoration-none">Ver todos os alertas</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h5 class="mb-0"><i class="fas fa-lightbulb me-2"></i> Recomendações</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert alert-success">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-check-circle fa-2x"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6>Regime tributário adequado</h6>
+                                            <p class="mb-0 small">Seu regime atual (Simples Nacional) é o mais vantajoso para seu faturamento.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="alert alert-info">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-info-circle fa-2x"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h6>Otimização de créditos</h6>
+                                            <p class="mb-0 small">Você pode aproveitar R$ 850,00 em créditos fiscais não utilizados.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-calculator me-1"></i> Simular Otimização
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-light py-3 mt-4 border-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <span class="text-muted">© 2023 Fintech Tributária - Todos os direitos reservados</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none me-3">Termos de Uso</a>
+                    <a href="#" class="text-decoration-none me-3">Política de Privacidade</a>
+                    <a href="#" class="text-decoration-none">Suporte</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
